@@ -1,5 +1,11 @@
 # Sparse Codes Make Linear Attention Trustworthy: A Graph-Structured Explainer
 
+# Graph Associative Memory Explainer
+### DataForge x rime Hackathon — Pathway Track
+
+**Live artifact:** https://linear-attention-7zuzdsp9w446unovmsdlhj.streamlit.app
+**Source repo:** https://github.com/Orpheus829/Linear-Attention
+
 ## The one-sentence claim
 
 On a graph, replacing dense pairwise attention with linear, per-edge message
@@ -65,14 +71,17 @@ After using this artifact, a learner should be able to:
 
 ## How to reproduce
 
-**Locally:**
+## Reproduction Steps
+1. **Recommended:** open the live artifact link above — no setup needed.
+
+2. **Locally:**
 ```
 pip install -r requirements.txt
 python3 validate.py                  # confirms correctness before trusting anything else
 python3 experiment.py                # reproduces the core sweep, 5 seeds per load (results.json)
 python3 plot_results.py              # reproduces accuracy_and_cost.png (accuracy, fidelity, cost)
 python3 dimension_scaling_check.py   # confirms the collapse point scales with d (dimension_scaling.png)
-jupyter notebook graph_memory_explainer.ipynb
+streamlit run app.py                 # Interactive visualization
 ```
 
 **Via Binder (no sign-in required):** push this repo to GitHub, then generate
